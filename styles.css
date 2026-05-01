@@ -62,6 +62,22 @@ code, pre { font-family: 'JetBrains Mono', monospace; }
 .nav nav { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
 .nav nav a:hover { color: var(--fg); }
 
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.lang-switch {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 36px; height: 32px; padding: 0 10px;
+  border-radius: 8px; border: 1px solid var(--line);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+  color: var(--muted); background: rgba(255,255,255,0.02);
+  font-family: 'JetBrains Mono', monospace;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.lang-switch:hover {
+  color: var(--fg);
+  border-color: rgba(124, 92, 255, 0.5);
+  background: rgba(124, 92, 255, 0.1);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;

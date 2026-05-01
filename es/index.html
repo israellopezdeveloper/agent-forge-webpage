@@ -1,55 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent-Forge — Multi-tenant platform for AI agents</title>
-  <meta name="description" content="Marketplace, installation, execution, orchestration, and billing of AI agents in a single platform." />
-  <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="alternate" hreflang="en" href="/index.html" />
-  <link rel="alternate" hreflang="es" href="/es/index.html" />
+  <title>Agent-Forge — Plataforma multi-tenant para agentes de IA</title>
+  <meta name="description" content="Marketplace, instalación, ejecución, orquestación y facturación de agentes de IA en una sola plataforma." />
+  <link rel="icon" type="image/png" href="../logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <div class="bg-grid"></div>
   <div class="bg-glow"></div>
 
   <header class="nav">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Agent-Forge" />
+    <a href="#" class="logo">
+      <img src="../logo.png" alt="Agent-Forge" />
     </a>
     <nav>
-      <a href="#features">Platform</a>
-      <a href="#architecture">Architecture</a>
+      <a href="#features">Plataforma</a>
+      <a href="#architecture">Arquitectura</a>
       <a href="#stack">Stack</a>
-      <a href="#start">Get started</a>
+      <a href="#start">Empezar</a>
     </nav>
     <div class="nav-right">
-      <a class="lang-switch" href="es/index.html" title="Ver en español">ES</a>
+      <a class="lang-switch" href="../index.html" title="View in English">EN</a>
       <a class="btn btn-ghost" href="https://github.com/IsraelLopezDeveloper/Agent-Forge" target="_blank" rel="noopener">GitHub →</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <img src="logo.png" alt="" class="hero-logo" />
+      <img src="../logo.png" alt="" class="hero-logo" />
       <span class="badge">▲ Modular monolith · Multi-tenant · RLS</span>
       <h1>
-        The platform to <span class="grad">forge, deploy, and bill</span> AI agents.
+        La plataforma para <span class="grad">forjar, desplegar y facturar</span> agentes de IA.
       </h1>
       <p class="lead">
-        Marketplace, per-tenant installation, signed HTTP execution, workflow orchestration,
-        and billing — all isolated by PostgreSQL <strong>Row Level Security</strong>.
+        Marketplace, instalación por tenant, ejecución firmada por HTTP, orquestación con workflows
+        y facturación — todo aislado por <strong>Row Level Security</strong> de PostgreSQL.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#start">Try it locally</a>
-        <a class="btn btn-ghost" href="#architecture">See architecture</a>
+        <a class="btn btn-primary" href="#start">Probar en local</a>
+        <a class="btn btn-ghost" href="#architecture">Ver arquitectura</a>
       </div>
 
-      <pre class="code"><span class="c-comment"># Boot the full stack</span>
+      <pre class="code"><span class="c-comment"># Arrancar el stack completo</span>
 <span class="c-cmd">$</span> cp .env.example .env
 <span class="c-cmd">$</span> make dev
 
@@ -59,46 +57,46 @@
     </section>
 
     <section id="features" class="section">
-      <h2>A platform, not an agent</h2>
-      <p class="sub">Agent-Forge is agent-agnostic. You bring the signed HTTP contract; we provide the rest.</p>
+      <h2>Una plataforma, no un agente</h2>
+      <p class="sub">Agent-Forge es agnóstico al agente. Tú traes el contrato HTTP firmado; nosotros aportamos el resto.</p>
 
       <div class="grid">
         <article class="card">
           <div class="card-icon">🛒</div>
           <h3>Marketplace</h3>
-          <p>Versioned agents with input and output JSON Schemas, pricing model, and runtime endpoint.</p>
+          <p>Agentes versionados con JSON Schema de entrada y salida, pricing model y endpoint de runtime.</p>
         </article>
         <article class="card">
           <div class="card-icon">🔐</div>
-          <h3>Tenant isolation</h3>
-          <p>PostgreSQL RLS as defense in depth. <code>tenant_id</code> never travels in the body.</p>
+          <h3>Aislamiento por tenant</h3>
+          <p>RLS de PostgreSQL como defensa en profundidad. <code>tenant_id</code> nunca viaja en el body.</p>
         </article>
         <article class="card">
           <div class="card-icon">⚡</div>
-          <h3>Signed execution</h3>
-          <p>HMAC-SHA256 over the body. Input/output validation and secret masking in logs.</p>
+          <h3>Ejecución firmada</h3>
+          <p>HMAC-SHA256 sobre el body. Validación de entrada/salida y enmascarado de secretos en logs.</p>
         </article>
         <article class="card">
           <div class="card-icon">🧭</div>
           <h3>Workflows</h3>
-          <p>Visual editor with React Flow. Agent, condition, human approval, and event emission nodes.</p>
+          <p>Editor visual con React Flow. Nodos de agente, condición, aprobación humana y emisión de eventos.</p>
         </article>
         <article class="card">
           <div class="card-icon">📡</div>
           <h3>Triggers</h3>
-          <p>Manual, webhook, and cron — with adapter interfaces defined for inbound email and WhatsApp.</p>
+          <p>Manual, webhook y cron — con adaptadores definidos para email y WhatsApp inbound.</p>
         </article>
         <article class="card">
           <div class="card-icon">💳</div>
           <h3>Billing &amp; wallet</h3>
-          <p>Internal metering as the source of truth. Prepaid wallet, soft/hard limits, and Stripe behind an interface.</p>
+          <p>Métricas internas como fuente de verdad. Wallet prepago, soft/hard limits y Stripe tras una interfaz.</p>
         </article>
       </div>
     </section>
 
     <section id="architecture" class="section">
-      <h2>Architecture on a single page</h2>
-      <p class="sub">Modular monolith: a single deployable, with clear internal boundaries.</p>
+      <h2>Arquitectura en una página</h2>
+      <p class="sub">Modular monolith: un único deployable, fronteras internas claras.</p>
 
       <div class="arch">
         <div class="arch-row">
@@ -107,7 +105,7 @@
         <div class="arch-arrow">↓ JWT · X-Tenant-Id</div>
         <div class="arch-row">
           <div class="arch-box big">
-            <strong>FastAPI · 11 modules</strong>
+            <strong>FastAPI · 11 módulos</strong>
             <div class="chips">
               <span>identity</span><span>marketplace</span><span>installations</span>
               <span>execution</span><span>events</span><span>workflows</span>
@@ -119,37 +117,37 @@
         <div class="arch-row split">
           <div class="arch-box">PostgreSQL 16 · <em>RLS</em></div>
           <div class="arch-box">Redis · Streams + Arq</div>
-          <div class="arch-box">External agents · signed HTTP</div>
+          <div class="arch-box">Agentes externos · HTTP firmado</div>
         </div>
       </div>
     </section>
 
     <section id="stack" class="section">
-      <h2>Mandated stack</h2>
+      <h2>Stack mandatado</h2>
       <div class="stack">
         <div><b>Backend</b><span>Python · FastAPI · Pydantic v2 · SQLAlchemy 2 · Alembic · asyncpg</span></div>
         <div><b>Worker</b><span>Arq + Redis</span></div>
-        <div><b>DB</b><span>PostgreSQL 16 with Row Level Security</span></div>
+        <div><b>DB</b><span>PostgreSQL 16 con Row Level Security</span></div>
         <div><b>Frontend</b><span>Vite · React · TypeScript · Tailwind · shadcn/ui · React Flow</span></div>
-        <div><b>Auth</b><span>JWT (passlib + python-jose) · Google OAuth</span></div>
+        <div><b>Auth</b><span>JWT (passlib + python-jose) · OAuth Google</span></div>
         <div><b>Infra</b><span>Docker Compose · Make</span></div>
       </div>
     </section>
 
     <section id="start" class="section center">
-      <h2>Ready to forge your first agent</h2>
-      <p class="sub">Clone the repo, run <code>make dev</code>, and sign in with the pre-loaded demo tenant.</p>
+      <h2>Listo para forjar tu primer agente</h2>
+      <p class="sub">Clona el repo, ejecuta <code>make dev</code> y entra con el tenant demo pre-cargado.</p>
       <div class="cta-row center">
-        <a class="btn btn-primary" href="https://github.com/IsraelLopezDeveloper/Agent-Forge" target="_blank" rel="noopener">View on GitHub</a>
-        <a class="btn btn-ghost" href="https://github.com/IsraelLopezDeveloper/Agent-Forge#readme" target="_blank" rel="noopener">Read the README</a>
+        <a class="btn btn-primary" href="https://github.com/IsraelLopezDeveloper/Agent-Forge" target="_blank" rel="noopener">Ver en GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/IsraelLopezDeveloper/Agent-Forge#readme" target="_blank" rel="noopener">Leer el README</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>© <span id="year"></span> Agent-Forge · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · Made with care by Israel López</span>
+    <span>© <span id="year"></span> Agent-Forge · <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · Hecho con cariño por Israel López</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
